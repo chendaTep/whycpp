@@ -1,0 +1,46 @@
+#include <iostream> 
+#include <string>
+
+
+struct Movie {
+
+  std :: string nameMovie ; 
+  int numMovie ; 
+  
+} myStructure ;
+
+int main () {
+  
+
+  std :: cout << "How many movie do you want to rate? (Must type in a number ) : " << std :: endl ; 
+  std :: cin >> myStructure.numMovie; 
+  
+ if(myStructure.numMovie<=  0 ) { 
+   std :: cout << "Must rate at least one moive !!! " ; 
+ return 0 ; }
+
+ // creating an array 
+ 
+ std :: string* lists = new std :: string[myStructure.nameMovie] ; 
+
+ std :: cin.ignore() ; 
+ 
+ for (int i  = 0 ; i < myStructure.nameMovie; i++ ) { 
+
+   std :: cout << "Please list down the moives name : " << (i + 1 ) << ": " << std :: endl ;
+
+   getline(std :: cin , lists[i]) ; 
+ }
+
+
+//std :: cout << "---------Enter a rating from (1-5): ---------- " << std :: endl; 
+
+//std :: cin >> *rating; 
+
+
+
+   
+}
+//int* rating = new int  [myStructure.numMovie] ; 
+return 0 ; 
+}

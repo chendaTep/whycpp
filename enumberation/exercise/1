@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+
+
+enum Days {
+
+  Monday = 1, 
+  Tuesday = 2 , 
+  Wednesday = 3 , 
+  Thursday = 4 , 
+  Friday = 5 ,
+  Saturday = 6 , 
+  Sunday = 7 
+} ; 
+
+int main () { 
+int enum Days input ; 
+
+  std :: cout << "Please enter from 1-7 to see the day: " << std :: endl; std :: cin >> int ; 
+
+
+  switch (int) {
+    case 1 : 
+      std :: cout << "Today is Monday!"; 
+      break; 
+    case 2 : 
+      std :: cout << "Today is Tuesday!"; 
+      break; 
+    case 3 : 
+      std :: cout << "Today is Wednesday!" ; 
+      break; 
+      case 4 : 
+      std :: cout << "Today is Thursday!"; 
+      break; 
+      case 5 : 
+      std :: cout << "Today is Friday!" ; 
+      break; 
+      case 6 : 
+      std :: cout << "Today is Saturday!" ; 
+      break; 
+      case 7 : 
+      std ::cout << "Today is Sunday!"; 
+      break; 
+    default:
+      std :: cout << "Warning : PLease enter a number!!!!! "; 
+      break;
+  }; 
+
+
+
+
+
+  return 0;
+}
