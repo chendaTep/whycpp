@@ -18,26 +18,25 @@ public:
     pages = p;
     isAvialible = true;
   }
-  void setTitle(std ::string t) { title = t; }
-  void setAuthor(std ::string a) { author = a; }
-  void setPages(int p) { pages = p; }
+  // void setTitle(std ::string t) { title = t; }
+  // void setAuthor(std ::string a) { author = a; }
+  // void setPages(int p) { pages = p; }
   void borrowBook() {
     if (isAvialible) {
       isAvialible = false;
-      std ::cout << "You borrowed" << title << std ::endl;
+      std ::cout << "You borrowed " << title << std ::endl;
 
     } else {
       std ::cout << "Sorry, " << title << "is already borrowed " << std ::endl;
     }
   }
   void returnBook() {
-    if (isAvialible) {
-      isAvialible = true;
-      std ::cout << title << "has been returned !" << std ::endl;
-    }
+
+    isAvialible = true;
+    std ::cout << title << "has been returned !" << std ::endl;
   }
   void displayInfo() {
-    std ::cout << title << "by" << author << " - " << pages << "pages\n"
+    std ::cout << title << "by " << author << " - " << pages << "pages\n"
                << std ::endl;
     if (isAvialible) {
       std ::cout << "Status: Available ";
@@ -66,14 +65,15 @@ int main() {
     int pages;
     std ::cout << "Enter book:" << (i + 1) << " " << "title:" << std ::endl;
     getline(std ::cin, title);
-    books[i]->setTitle(title);
+    // Books[i]->setTitle(title);
     std ::cout << "Enter author:" << std ::endl;
     getline(std ::cin, author);
-    books[i]->setAuthor(author);
+    // books[i]->setAuthor(author);
     std ::cout << "Enter pages:" << std ::endl;
     std ::cin >> pages;
-    books[i]->setPages(pages);
+    // books[i]->setPages(pages);
     std ::cin.ignore();
+    books[i] = new Book(title, author, pages);
     std ::cout << std ::endl;
   }
   std ::cout << "\n===== Library Books =====\n" << std ::endl;
@@ -87,7 +87,7 @@ int main() {
   int choice;
   std ::cin >> choice;
   books[choice - 1]->borrowBook();
-  books[choice - 1]->returnBook();
+  books[choice - 1]->borrowBook();
   std ::cout << "\nTrying to borrowed book again \n" << std ::endl;
   books[choice - 1]->returnBook();
   std ::cout << "====== Library Books ======" << std ::endl;
