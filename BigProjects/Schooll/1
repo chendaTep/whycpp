@@ -1,0 +1,10 @@
+#include <chrono>
+#include <iostream>
+#include <string>
+#include <thread>
+Class School {
+private:
+  std ::string student_name;
+}
+
+int main() { return 0; }
