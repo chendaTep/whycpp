@@ -18,12 +18,18 @@ void addProduct(std::vector<Product> &cart);
 void removeProduct(std::vector<Product> &cart);
 void showProduct(const std::vector<Product> &cart);
 
+/*std::string toLower(std::string str){
+  for (char &c : str) {
+    c = std::toLower(c);
+  }
+  return str;
+}*/
 int main() {
   std::vector<Product> cart;
   int choice;
   do {
     std ::cout << std ::setw(10) << std::string(6, '>')
-               << " Welcome to Chenda Shop " << std ::string(6, '<')
+               << " Welcome to Chenda & Pisey Shop " << std ::string(6, '<')
                << std ::endl;
     std::cout << std ::setw(17) << std::string(6, '>') << " Menu "
               << std ::string(6, '<') << std ::endl;
